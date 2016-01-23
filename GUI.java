@@ -15,6 +15,7 @@ public class GUI extends JApplet {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
+	private JTextField textField_3;
 
 	/**
 	 * Create the applet.
@@ -25,21 +26,21 @@ public class GUI extends JApplet {
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblDimensionsOfSpace = new JLabel("Dimensions of Space: ");
-		lblDimensionsOfSpace.setBounds(42, 75, 140, 16);
+		JLabel lblDimensionsOfSpace = new JLabel("Length of Space:");
+		lblDimensionsOfSpace.setBounds(42, 58, 140, 16);
 		panel.add(lblDimensionsOfSpace);
 		
 		textField = new JTextField();
-		textField.setBounds(194, 69, 134, 28);
+		textField.setBounds(194, 52, 134, 28);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNumberOfExits = new JLabel("Number of Exits:");
-		lblNumberOfExits.setBounds(42, 123, 140, 16);
+		lblNumberOfExits.setBounds(42, 138, 140, 16);
 		panel.add(lblNumberOfExits);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(194, 117, 134, 28);
+		textField_1.setBounds(194, 132, 134, 28);
 		panel.add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -56,6 +57,15 @@ public class GUI extends JApplet {
 		btnSubmitRequest.setBounds(143, 238, 140, 29);
 		panel.add(btnSubmitRequest);
 		
+		JLabel lblWidthOfSpace = new JLabel("Width of Space:");
+		lblWidthOfSpace.setBounds(42, 98, 110, 16);
+		panel.add(lblWidthOfSpace);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(194, 92, 134, 28);
+		panel.add(textField_3);
+		textField_3.setColumns(10);
+		
 		btnSubmitRequest.addActionListener(new ActionListener(){
 
 			@Override
@@ -69,6 +79,8 @@ public class GUI extends JApplet {
 				
 				String textFieldValue3 = textField_2.getText();
 				System.out.println(textFieldValue3);
+				
+				GUI.this.setVisible(false);
 			}
 			
 		});

@@ -6,11 +6,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
+import java.awt.Canvas;
 import java.awt.Font;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class GUI extends JApplet {
+	private JFrame frame = new JFrame();
 	private final JPanel panel = new JPanel();
 	private JTextField textField;
 	private JTextField textField_1;
@@ -21,6 +25,7 @@ public class GUI extends JApplet {
 	 * Create the applet.
 	 */
 	public GUI() {
+		frame.add(panel);
 		getContentPane().setLayout(null);
 		panel.setBounds(0, 0, 450, 300);
 		getContentPane().add(panel);
@@ -81,6 +86,15 @@ public class GUI extends JApplet {
 				System.out.println(textFieldValue3);
 				
 				GUI.this.setVisible(false);
+				
+				getContentPane().setLayout(null);
+				
+				JPanel panel2 = new JPanel();
+				panel.setBounds(86, 6, 275, 212);
+				getContentPane().add(panel2);
+				
+				Canvas canvas = new Canvas();
+				panel2.add(canvas);
 			}
 			
 		});

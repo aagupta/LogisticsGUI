@@ -85,6 +85,9 @@ public class GUI extends JApplet {
 				String textFieldValue3 = textField_2.getText();
 				System.out.println(textFieldValue3);
 				
+				String textFieldValue4 = textField_3.getText();
+				System.out.println(textFieldValue4);
+				
 				GUI.this.setVisible(false);
 				
 				getContentPane().setLayout(null);
@@ -94,6 +97,7 @@ public class GUI extends JApplet {
 				getContentPane().add(panel2);
 				
 				Canvas canvas = new Canvas();
+				canvas.setSize(100,100);
 				panel2.add(canvas);
 			}
 			

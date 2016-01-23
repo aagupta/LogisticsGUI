@@ -1,5 +1,6 @@
 import javax.swing.JApplet;
 import java.awt.GridBagLayout;
+import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,7 +26,7 @@ public class GUI extends JApplet {
 	 * Create the applet.
 	 */
 	public GUI() {
-		frame.add(panel);
+		
 		getContentPane().setLayout(null);
 		panel.setBounds(0, 0, 450, 300);
 		getContentPane().add(panel);
@@ -91,11 +92,23 @@ public class GUI extends JApplet {
 				GUI.this.setVisible(false);
 				
 				getContentPane().setLayout(null);
-				
+				frame.add(panel);
+				Panel panel2 = new Panel();
+				panel.setBounds(94, 10, 250, 143);
+				getContentPane().add(panel2);
 				
 				Canvas canvas = new Canvas();
-				canvas.setBounds(135, 10, 100, 100);
-				frame.add(canvas);
+				panel2.add(canvas);
+				
+				JLabel lblOptimizedResult = new JLabel("Optimized Result: ");
+				lblOptimizedResult.setBounds(66, 216, 127, 16);
+				getContentPane().add(lblOptimizedResult);
+				
+				JTextField textField = new JTextField();
+				textField.setBounds(192, 210, 134, 28);
+				textField.setEditable(false);
+				getContentPane().add(textField);
+				textField.setColumns(10);
 			}
 			
 		});

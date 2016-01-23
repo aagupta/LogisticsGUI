@@ -26,9 +26,9 @@ public class GUI extends JApplet {
 	 */
 	public GUI() {
 		frame.add(panel);
-		getContentPane().setLayout(null);
+		//getContentPane().setLayout(null);
 		panel.setBounds(0, 0, 450, 300);
-		getContentPane().add(panel);
+		//getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblDimensionsOfSpace = new JLabel("Length of Space:");
@@ -90,11 +90,11 @@ public class GUI extends JApplet {
 				
 				GUI.this.setVisible(false);
 				
-				getContentPane().setLayout(null);
+				//getContentPane().setLayout(null);
 				
 				JPanel panel2 = new JPanel();
 				panel.setBounds(86, 6, 275, 212);
-				getContentPane().add(panel2);
+				frame.add(panel2);
 				
 				Canvas canvas = new Canvas();
 				canvas.setSize(100,100);

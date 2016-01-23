@@ -92,7 +92,6 @@ public class GUI extends JApplet {
 				GUI.this.setVisible(false);
 				
 				getContentPane().setLayout(null);
-				frame.add(panel);
 				Panel panel2 = new Panel();
 				panel.setBounds(94, 10, 250, 143);
 				getContentPane().add(panel2);
@@ -109,6 +108,7 @@ public class GUI extends JApplet {
 				textField.setEditable(false);
 				getContentPane().add(textField);
 				textField.setColumns(10);
+				frame.add(panel2);
 			}
 			
 		});

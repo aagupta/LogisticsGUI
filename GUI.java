@@ -92,13 +92,10 @@ public class GUI extends JApplet {
 				
 				getContentPane().setLayout(null);
 				
-				JPanel panel2 = new JPanel();
-				panel.setBounds(86, 6, 275, 212);
-				frame.add(panel2);
 				
 				Canvas canvas = new Canvas();
-				canvas.setSize(100,100);
-				panel2.add(canvas);
+				canvas.setBounds(135, 10, 100, 100);
+				frame.add(canvas);
 			}
 			
 		});

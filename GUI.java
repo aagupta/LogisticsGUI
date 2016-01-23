@@ -92,23 +92,10 @@ public class GUI extends JApplet {
 				GUI.this.setVisible(false);
 				
 				getContentPane().setLayout(null);
-				Panel panel2 = new Panel();
-				panel2.setBounds(94, 10, 250, 143);
-				getContentPane().add(panel2);
 				
-				Canvas canvas = new Canvas();
-				panel2.add(canvas);
-				
-				JLabel lblOptimizedResult = new JLabel("Optimized Result: ");
-				lblOptimizedResult.setBounds(66, 216, 127, 16);
-				getContentPane().add(lblOptimizedResult);
-				
-				JTextField textField = new JTextField();
-				textField.setBounds(192, 210, 134, 28);
-				textField.setEditable(false);
-				getContentPane().add(textField);
-				textField.setColumns(10);
-				frame.add(panel2);
+				GUI2 secondPanel = new GUI2();
+				frame.add(secondPanel);
+				secondPanel.setVisible(true);
 			}
 			
 		});

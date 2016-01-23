@@ -26,10 +26,11 @@ public class GUI extends JApplet {
 	 * Create the applet.
 	 */
 	public GUI() {
-		
-		getContentPane().setLayout(null);
+		frame.setLayout(null);
+		//getContentPane().setLayout(null);
 		panel.setBounds(0, 0, 450, 300);
-		getContentPane().add(panel);
+		//getContentPane().add(panel);
+		frame.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblDimensionsOfSpace = new JLabel("Length of Space:");
@@ -89,9 +90,10 @@ public class GUI extends JApplet {
 				String textFieldValue4 = textField_3.getText();
 				System.out.println(textFieldValue4);
 				
-				GUI.this.setVisible(false);
+				panel.setVisible(false);
+				//GUI.this.setVisible(false);
 				
-				getContentPane().setLayout(null);
+				//getContentPane().setLayout(null);
 				
 				GUI2 secondPanel = new GUI2();
 				frame.add(secondPanel);
